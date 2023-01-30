@@ -49,25 +49,31 @@ html{
         
 }
 
-/* Change to 1 column layout on mobile devices */
-@media (max-width: 768px) {
-    .grid {
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
-
 .grid-2 {
     margin-top: 20vh;
     margin-left: 10vh;
     margin-right: 10vh;
     display: grid;
     grid-template-columns: repeat(2fr, 1fr); /* 2 columns with equal width */
-    grid-gap: 10vh; 
+    
     object-fit: cover;
     /* gap between grid items */
         
 }
+
+
+/* Change to 1 column layout on mobile devices */
+@media (max-width: 768px) {
+    .grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    img.avatar {
+        display: none;
+      }
+}
+
+
 .flex-container {
     display: flex;
     justify-content: space-between;
