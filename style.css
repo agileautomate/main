@@ -651,7 +651,7 @@ footer span a:hover{
 }
 
 /* Change to 1 column layout on mobile devices */
-@media (max-width: 768px) {
+@media (max-width: 991px) {
     .grid {
         grid-template-columns: repeat(1, 1fr);
     }
