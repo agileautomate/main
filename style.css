@@ -41,21 +41,9 @@ html{
 
 
 .grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 2 columns with equal width */
+    display:grid;
+    grid-template-columns: repeat(1, 1fr); /* 2 columns with equal width */
     grid-gap: 5vh; 
-    object-fit: cover;
-    /* gap between grid items */
-        
-}
-
-.grid-2 {
-    margin-top: 20vh;
-    margin-left: 10vh;
-    margin-right: 10vh;
-    display: grid;
-    grid-template-columns: repeat(2fr, 1fr); /* 2 columns with equal width */
-    grid-gap: 10vh; 
     object-fit: cover;
     /* gap between grid items */
         
@@ -117,11 +105,10 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;    
-    border: 1px solid rgb(199, 199, 199); /* small border around project */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+       
     padding: 5px;
     
-    border-radius:10px;
+    
 }
 .project p {
     text-align: center; /* center align the text */
@@ -131,18 +118,19 @@ img {
 .project img {
     width: 100%; /* make the image full width of the project */
     border-radius:5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    height: 220px;
+    box-shadow: 0 0 13px rgba(28, 62, 197, 0.5);
+    height:350px;
     max-width: 60vw;
     object-fit: cover;
+    margin-bottom: 10px;
     
 }
 
 
 .divider {
     width: 100%; /* take up full width of the container */
-    border-bottom: 1px solid #ccc; /* add a bottom border */
-    margin: 100px auto; /* add margin to the top and bottom and center the divider */
+    border-bottom: 1.5px solid #121212; /* add a bottom border */
+    margin: 50px auto; /* add margin to the top and bottom and center the divider */
     padding: 0 15px; 
 }
 .home-content a {
@@ -159,11 +147,18 @@ section{
     padding: 0 80px;
     margin: auto;
 }
-.about, .contact{
+.about{
     font-family: 'Poppins', sans-serif;
-    min-height: 100vh;
+    min-height: 50vh;
     
 }
+
+.contact{
+    font-family: 'Poppins', sans-serif;
+    min-height: 70vh;
+    
+}
+
 .footer{
     font-family: 'Poppins', sans-serif;
     min-height: 10vh;
@@ -179,22 +174,35 @@ section{
 }
 section .title{
     position: relative;
-    text-align: center;
+    text-align: left;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 100;
     margin-bottom: 60px;
-    padding-bottom: 20px;
+    padding-bottom: 3px;
     font-family: 'Ubuntu', sans-serif;
 }
+
+section .title2{
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 35px;
+    padding-bottom: 3px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+
 section .title::before{
     content: "";
     position: absolute;
     bottom: 0px;
     left: 50%;
-    width: 180px;
-    height: 3px;
-    background: grey;
-    transform: translateX(-50%);
+    width: 80vh;
+    height: 2px;
+    background: rgb(0, 0, 0);
+    transform: translateX(-55%);
 }
 section .title::after{
     position: absolute;
@@ -214,11 +222,11 @@ section .title::after{
     z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
-    transition: all 0.3s ease;
+    transition: all 0.s ease;
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: rgb(77, 77, 77);
+    background: rgb(2, 8, 60);
 }
 .navbar .max-width{
     display: flex;
@@ -244,13 +252,12 @@ section .title::after{
 .navbar .menu li a{
     display: block;
     color: #fff;
-    font-size: 18px;
-    font-weight: 500;
-    margin-left: 25px;
-    transition: color 0.3s ease;
+    font-size: 40px;
+    font-weight: 500;    
+    transition: color .1s ease;
 }
 .navbar .menu li a:hover{
-    color: #00FF41;
+    color: #ffffff;
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -259,15 +266,16 @@ section .title::after{
 /* menu btn styling */
 .menu-btn{
     color: #fff;
-    font-size: 23px;
+    font-size: 40px;
     cursor: pointer;
     display: none;
+    margin-right: 100vh;
 }
 .scroll-up-btn{
     position: fixed;
     height: 45px;
     width: 42px;
-    background: #00a429;
+    background:#555;
     right: 30px;
     bottom: 10px;
     text-align: center;
@@ -295,7 +303,7 @@ section .title::after{
 .home{
     display: flex;
     /* background-image: url("images/banner.jpg"); */
-    background-color: rgba(0, 0, 0, 0.942);
+    background-color:  #3953d3;
     height: 55vh;
     color: #fff;
     min-height: 100vh;
@@ -314,16 +322,16 @@ section .title::after{
     font-size: 27px;
 }
 .home .home-content .text-2{
-    font-size: 55px;
-    font-weight: 600;
-    margin-left: -3px;
+    font-size: 30px;
+    font-weight: 100;
+    margin-left: 0px;
 }
 .home .home-content .text-3{
     font-size: 40px;
     margin: 5px 0;
 }
 .home .home-content .text-3 span{
-    color: #00FF41;
+    color: #090909;
     font-weight: 500;
 
 }
@@ -336,11 +344,11 @@ section .title::after{
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
-    border: 2px solid rgb(0, 250, 129);
+    border: 2px solid rgb(255, 255, 255);
     transition: all 0.3s ease;
 }
 .home .home-content a:hover{
-    color: #00FF41;
+    color: #fdd8d8;
     background: none;
 }
 
@@ -567,14 +575,14 @@ footer span a:hover{
         font-size: 25px;
     }
     .home .home-content .text-2{
-        font-size: 70px;
+        font-size: 40px;
     }
     .home .home-content .text-3{
         font-size: 35px;
     }
     .home .home-content a{
         font-size: 23px;
-        padding: 10px 30px;
+        padding: 19px 100px;
     }
     .max-width{
         max-width: 930px;
@@ -585,7 +593,7 @@ footer span a:hover{
     .about .about-content .left{
         display: flex;
         justify-content: center;
-        margin: 0 auto 60px;
+        margin: 50 auto 60px;
     }
     .about .about-content .right{
         flex: 100%;
@@ -606,7 +614,7 @@ footer span a:hover{
         padding: 0 23px;
     }
     .home .home-content .text-2{
-        font-size: 60px;
+        font-size: 56px;
     }
     .home .home-content .text-3{
         font-size: 32px;
