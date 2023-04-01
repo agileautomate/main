@@ -529,7 +529,7 @@ section .title::after{
 
 
 .right form .button-area button{
-  color: rgb(39, 39, 39);
+  color: rgb(120, 119, 119);
   display: block;
   width: 160px!important;
   height: 45px;
@@ -540,13 +540,13 @@ section .title::after{
   cursor: pointer;
   flex-wrap: nowrap;
   background: #fff;
-  border: 2px solid grey;
-  
+  border: 2px solid  lightgrey;  
   transition: all 0.1s ease;
 }
 .right form .button-area button:hover{
-  color: #7c7c7c;
+  color: #000000;
   background: none;
+  border: 2px solid  rgb(0, 0, 0);
 }
 /* footer section styling */
 footer{
@@ -554,6 +554,7 @@ footer{
     padding: 19px 23px;
     color: #fff;
     text-align: center;
+    font-family: 'Poppins', sans-serif;
 }
 footer span a{
     color: crimson;
