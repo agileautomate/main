@@ -112,6 +112,9 @@ img {
 }
 .project p {
     text-align: center; /* center align the text */
+    padding-left: 20vh;
+    padding-right: 20vh;
+
 }
 
 
@@ -186,12 +189,21 @@ section .title2{
     position: relative;
     text-align: center;
     font-size: 30px;
-    font-weight: 500;
-    margin-bottom: 35px;
+    font-weight: 400;
+    margin-bottom: 15px;
     padding-bottom: 3px;
     font-family: 'Ubuntu', sans-serif;
 }
 
+section .title3{
+    position: relative;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    
+    
+}
 
 
 section .title::before{
@@ -222,11 +234,11 @@ section .title::after{
     z-index: 999;
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
-    transition: all 0.s ease;
+    transition: all 0.8s ease;
 }
 .navbar.sticky{
     padding: 15px 0;
-    background: rgb(2, 8, 60);
+    background:#3953d3;
 }
 .navbar .max-width{
     display: flex;
@@ -258,6 +270,7 @@ section .title::after{
 }
 .navbar .menu li a:hover{
     color: #ffffff;
+    
 }
 .navbar.sticky .menu li a:hover{
     color: #fff;
@@ -269,7 +282,9 @@ section .title::after{
     font-size: 40px;
     cursor: pointer;
     display: none;
-    margin-right: 100vh;
+    
+    
+    margin-right: 200vh;
 }
 .scroll-up-btn{
     position: fixed;
@@ -344,6 +359,8 @@ section .title::after{
     margin-top: 20px;
     font-weight: 400;
     border-radius: 6px;
+    animation: pulse 3s infinite;
+    animation-timing-function: ease-in-out;
     border: 2px solid rgb(255, 255, 255);
     transition: all 0.3s ease;
 }
@@ -351,6 +368,21 @@ section .title::after{
     color: #fdd8d8;
     background: none;
 }
+
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    }
+    50% {
+      transform: scale(1.05);
+      box-shadow: 0px 10px 20px rgba(0,0,0,0.6);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0px 5px 10px rgba(0,0,0,0.3);
+    }
+  }
 
 
 
@@ -497,7 +529,7 @@ section .title::after{
 
 
 .right form .button-area button{
-  color: rgb(159, 159, 159);
+  color: rgb(39, 39, 39);
   display: block;
   width: 160px!important;
   height: 45px;
@@ -509,16 +541,17 @@ section .title::after{
   flex-wrap: nowrap;
   background: #fff;
   border: 2px solid grey;
-  transition: all 0.3s ease;
+  
+  transition: all 0.1s ease;
 }
 .right form .button-area button:hover{
-  color: black;
+  color: #7c7c7c;
   background: none;
 }
 /* footer section styling */
 footer{
     background: #111;
-    padding: 15px 23px;
+    padding: 19px 23px;
     color: #fff;
     text-align: center;
 }
@@ -548,6 +581,7 @@ footer span a:hover{
     .menu-btn{
         display: block;
         z-index: 999;
+        
     }
     .menu-btn i.active:before{
         content: "\f00d";
@@ -573,12 +607,15 @@ footer span a:hover{
         display: inline-block;
         margin: 20px 0;
         font-size: 25px;
+        
     }
     .home .home-content .text-2{
         font-size: 40px;
+        
     }
     .home .home-content .text-3{
         font-size: 35px;
+        
     }
     .home .home-content a{
         font-size: 23px;
@@ -593,7 +630,7 @@ footer span a:hover{
     .about .about-content .left{
         display: flex;
         justify-content: center;
-        margin: 50 auto 60px;
+        margin: 0 auto 60px;
     }
     .about .about-content .right{
         flex: 100%;
@@ -615,6 +652,7 @@ footer span a:hover{
     }
     .home .home-content .text-2{
         font-size: 56px;
+        margin-bottom: 10vh;
     }
     .home .home-content .text-3{
         font-size: 32px;
@@ -625,12 +663,23 @@ footer span a:hover{
     .services .serv-content .card{
         width: 100%;
     }
+    
+    .project p {
+        text-align: center; /* center align the text */
+        padding-left: 0vh;
+        padding-right: 0vh;
+    
+    }
+    
 }
 
 @media (max-width: 500px) {
     .home .home-content .text-2{
         font-size: 50px;
     }
+
+
+    
     .home .home-content .text-3{
         font-size: 27px;
     }
@@ -655,6 +704,31 @@ footer span a:hover{
         width: 35px;
         font-size: 23px;
         line-height: 38px;
+    }
+    .project {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+           
+        padding: 5px;
+        
+        
+    }
+    .project p {
+        text-align: center; /* center align the text */
+
+    }
+    
+    
+    .project img {
+        width: 100%; /* make the image full width of the project */
+        border-radius:5px;
+        box-shadow: 0 0 13px rgba(28, 62, 197, 0.5);
+        height:200px;
+        max-width: 80vw;
+        object-fit:fill;
+        margin-bottom: 10px;
+        
     }
 }
 
@@ -686,4 +760,19 @@ footer span a:hover{
     
     
 }
+
+@keyframes pulse2 {
+    0% {
+      transform: scale(1);
+      
+    }
+    50% {
+      transform: scale(1.05);
+      
+    }
+    100% {
+      transform: scale(1);
+      
+    }
+  }
 
