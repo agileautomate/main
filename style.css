@@ -540,7 +540,7 @@ section .title::after{
   cursor: pointer;
   flex-wrap: nowrap;
   background: #fff;
-  border: 2px solid  lightgrey;  
+  border: 1px solid  lightgrey;  
   transition: all 0.1s ease;
 }
 .right form .button-area button:hover{
