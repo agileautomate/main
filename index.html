@@ -167,7 +167,7 @@
                 </div> 
                 <div class="column right">
                     <div class="text"></div>
-                    <form target="_blank" action="https://formsubmit.co/e7f373aba419befc228be54760748b08" method="POST">
+                    <form target="_replyto" action="https://formsubmit.co/e7f373aba419befc228be54760748b08" method="POST">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text"name="name" placeholder="Name" required>
@@ -184,6 +184,9 @@
                             <textarea cols="30" rows="10" name="message" placeholder="Message.." required></textarea>
                         </div> 
                         <div class="button-area">
+                            <input type="hidden" name="_subject" value="New submission!">
+                            <input type="hidden" name="_autoresponse" value="Thank you for your submission! A team member will reach out within 24 hours.">
+                            <input type="hidden" name="_next" value="Other/Thankyou.html">
                             <button type="submit">Submit</button>
                         </div>   
                      </form>
